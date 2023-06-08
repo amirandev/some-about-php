@@ -1,9 +1,9 @@
 <?php
 // Establish database connection using PDO
 $db_host = "localhost";
-$db_name = "your_database_name";
-$db_username = "your_username";
-$db_password = "your_password";
+$db_name = "example_db";
+$db_username = "root";
+$db_password = "";
 
 try {
     $db = new PDO("mysql:host=$db_host;dbname=$db_name", $db_username, $db_password);
@@ -42,8 +42,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         echo "Invalid username or password";
     }
 } else {
-    // Redirect back to the login form
-    header("Location: login.html");
-    exit();
+    
+    echo 'Login form can be added here'
 }
 ?>

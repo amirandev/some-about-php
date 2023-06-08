@@ -1,4 +1,3 @@
-```php
 <?php
 // Establish database connection using PDO
 $db_host = "localhost";
@@ -20,7 +19,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $user_password = $_POST['password'];
 
     // Prepare SQL statement with parameters
-    $query = "SELECT * FROM users WHERE username = '$user_username' AND password = '$user_password'";
+    $query = "SELECT * FROM users WHERE username = '".$user_username."' AND password = '".$user_password."'";
 
     // Execute the statement
     $result = $db->query($query);
@@ -48,5 +47,3 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     exit();
 }
 ?>
-
-```

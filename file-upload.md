@@ -1,4 +1,4 @@
-###PHP File Upload:
+### PHP File Upload:
 PHP provides built-in functions and features to handle file uploads. Here's a step-by-step explanation of how to upload files using PHP:
 
 1. HTML Form: Create an HTML form with the `enctype` attribute set to `"multipart/form-data"`. This attribute allows files to be uploaded through the form.

@@ -15,12 +15,16 @@ class FileInfo
     
     public function getSize()
     {
-        return filesize($this->path);
+        $sizeInBytes = filesize($this->path);
+        $sizeInMB = $sizeInBytes / (1024 * 1024); // Convert bytes to megabytes
+        
+        return round($sizeInMB, 2);
     }
     
     public function getLastModified()
     {
-        return filemtime($this->path);
+        $timestamp = filemtime($this->path);
+        return date('Y-m-d H:i:s', $timestamp);
     }
     
     public function getExtension()

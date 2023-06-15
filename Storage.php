@@ -1,5 +1,4 @@
 <?php
-
 class Storage
 {
     private $rootDirectory;
@@ -60,5 +59,27 @@ class Storage
         }
         
         return false;
+    }
+    
+    public function fileExists($file)
+    {
+        $filePath = $this->rootDirectory . '/' . $file;
+        
+        if (file_exists($filePath) && is_file($filePath)) {
+            return true;
+        }
+        
+        return false;
+    }
+    
+    public function fileInfo($file)
+    {
+        $filePath = $this->rootDirectory . '/' . $file;
+        
+        if (file_exists($filePath) && is_file($filePath)) {
+            return new FileInfo($filePath);
+        }
+        
+        return null;
     }
 }
